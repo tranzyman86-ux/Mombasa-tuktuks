@@ -1,0 +1,3 @@
+/admin/*
+  Content-Security-Policy: frame-ancestors 'self' https://api.netlify.com https://github.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://api.netlify.com; 
+  X-Frame-Options: ALLOW-FROM https://api.netlify.com
