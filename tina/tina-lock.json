@@ -1,0 +1,19 @@
+{
+  "$schema": "https://tina.io/schema.json",
+  "clientId": "d701189e-875c-4c4f-9738-b23a9cd358ba",
+  "branch": "main",
+  "schema": {
+    "collections": [
+      {
+        "name": "blog",
+        "label": "Blog Posts",
+        "path": "content/blog",
+        "format": "md",
+        "fields": [
+          {"type": "string", "name": "title", "label": "Title"},
+          {"type": "rich-text", "name": "body", "label": "Body"}
+        ]
+      }
+    ]
+  }
+}
