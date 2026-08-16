@@ -34,6 +34,7 @@ collections:
             - label: "Mileage"
         name: mileage
         widget: string
+        
             - label: "Price"
         name: price
         widget: number
