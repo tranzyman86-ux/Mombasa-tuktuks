@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuktuks For Sale - Mombasa</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #0B3D3E;
+    --yellow: #FACC15;
+    --cream: #FDF8EC;
+    --orange: #F97316;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--teal);color:#fff;font-family:'Space Grotesk', sans-serif;}
+  
+  header{position:fixed;top:0;width:100%;background:rgba(11,61,62,0.8);backdrop-filter:blur(10px);padding:20px;z-index:100;}
+  .private-banner{background:#1e3a3a;color:var(--yellow);text-align:center;padding:8px;font-size:12px;font-family:'IBM Plex Mono';}
+  .private-banner a{color:var(--yellow);text-decoration:underline;}
+  
+  .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+  
+  .hero{padding:160px 0 80px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(250,204,21,0.15);border:1px solid var(--yellow);color:var(--yellow);padding:8px 16px;border-radius:50px;font-size:12px;font-family:'IBM Plex Mono';margin-bottom:20px;}
+  .pill::before{content:'';width:8px;height:8px;background:var(--yellow);border-radius:50%;}
+  .hero h1{font-size:56px;font-weight:800;line-height:1.1;margin-bottom:20px;text-transform:uppercase;}
+  .hero h1 .yellow{color:var(--yellow);}
+  .hero p{font-size:16px;line-height:1.6;opacity:0.9;margin-bottom:30px;max-width:500px;}
+  .btn-group{display:flex;gap:15px;}
+  .btn-primary{background:var(--yellow);color:var(--teal);padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:700;border:none;cursor:pointer;}
+  .btn-secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.3);padding:12px 28px;border-radius:12px;text-decoration:none;font-weight:700;}
+  
+  .ticket-card{background:var(--cream);color:var(--teal);border-radius:20px;padding:0;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.3);font-family:'IBM Plex Mono';}
+  .ticket-card img{width:100%;height:220px;object-fit:cover;}
+  .ticket-body{padding:25px;}
+  .ticket-row{display:flex;justify-content:space-between;margin-bottom:18px;padding-bottom:18px;border-bottom:2px dashed rgba(11,61,62,0.2);}
+  .ticket-label{font-size:11px;opacity:0.6;text-transform:uppercase;}
+  .ticket-value{font-size:16px;font-weight:700;}
+  .price{color:var(--orange);font-size:28px;font-weight:800;}
+  .badge{background:var(--teal);color:var(--yellow);padding:6px 12px;border-radius:20px;font-size:12px;font-weight:700;}
+  
+  .filters{padding:60px 0;background:#0A3435;}
+  .filters h2{text-align:center;margin-bottom:30px;font-size:32px;}
+  .filter-group{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;}
+  .filter-btn{padding:10px 20px;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.2);color:#fff;border-radius:10px;cursor:pointer;font-weight:600;}
+  .filter-btn.active{background:var(--yellow);color:var(--teal);border-color:var(--yellow);}
+  #modelFilter{display:none;}
+  
+  .grid{padding:60px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;}
+  
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr;padding-top:120px;}
+    .hero h1{font-size:40px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="private-banner">
+    This project is private. Only project members can view this site and its deploy previews. <a href="#">Go live or manage access</a> in Netlify.
+  </div>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;padding-top:15px;">
+    <div style="font-weight:800;font-size:20px;">MOMBASA TUKTUKS</div>
+    <a href="#contact" class="btn-primary">Make an Inquiry</a>
+  </div>
+</header>
+
+<section class="hero container">
+  <div>
+    <div class="pill">Serving Mombasa Island, Nyali, Bamburi, Likoni & beyond</div>
+    <h1>TUKTUKS FOR SALE, <span class="yellow">SEAT BY SEAT, ROUTE BY ROUTE.</span></h1>
+    <p>Every three-wheeler here has been checked for logbook, engine hours and route history. Tell us your budget and area, and we'll match you with a tuktuk worth queuing for.</p>
+    <div class="btn-group">
+      <a href="#listings" class="btn-primary">Browse tuktuks for sale</a>
+      <a href="#contact" class="btn-secondary">Make an Inquiry</a>
+    </div>
+  </div>
+  <div>
+    <div class="ticket-card">
+      <img src="/images/featured-tuktuk.jpg" alt="Featured Tuktuk">
+      <div class="ticket-body">
+        <div class="ticket-row">
+          <div><div class="ticket-label">AREA</div><div class="ticket-value">NYALI, MOMBASA</div></div>
+          <div class="badge">Available</div>
+        </div>
+        <div class="ticket-row">
+          <div><div class="ticket-label">MODEL / YEAR</div><div class="ticket-value">BAJAJ RE, 2022</div></div>
+          <div><div class="ticket-label">MILEAGE</div><div class="ticket-value">18,400 KM</div></div>
+        </div>
+        <div class="ticket-row" style="border:none;margin:0;padding:0;">
+          <div><div class="ticket-label">ASKING PRICE</div><div class="price">KES 285,000</div></div>
+          <div style="text-align:right;"><div class="ticket-label">#MSA-0142</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="filters" id="listings">
+  <div class="container">
+    <h2>Find Your Tuktuk</h2>
+    <div class="filter-group" id="brandFilter">
+      <button class="filter-btn active" data-brand="all">All Brands</button>
+      <button class="filter-btn" data-brand="Baj">Baj</button>
+      <button class="filter-btn" data-brand="TVS">TVS</button>
+      <button class="filter-btn" data-brand="Piaggio">Piaggio</button>
+    </div>
+    <div class="filter-group" id="modelFilter">
+      <button class="filter-btn active" data-model="all">All Models</button>
+    </div>
+    <div class="filter-group" id="priceFilter">
+      <button class="filter-btn active" data-min="0" data-max="500000">All Prices</button>
+      <button class="filter-btn" data-min="0" data-max="150000">Under 150K</button>
+      <button class="filter-btn" data-min="150000" data-max="250000">150K - 250K</button>
+      <button class="filter-btn" data-min="250000" data-max="500000">250K+</button>
+    </div>
+    <div class="grid" id="tuktukGrid"></div>
+  </div>
+</section>
+
+<section id="contact" style="padding:80px 0;text-align:center;">
+  <div class="container">
+    <h2 style="font-size:36px;margin-bottom:20px;">Ready to Own One?</h2>
+    <a href="https://wa.me/254721895666" class="btn-primary">WhatsApp Us Now</a>
+  </div>
+</section>
+
+<script>
+const tuktuks = [
+  {id:1, brand:"Baj", model:"RE 4S", area:"NYALI, MOMBASA", modelFull:"BAJAJ RE", year:2022, mileage:"18,400 KM", price:285000, code:"#MSA-0142", image:"/images/bajaj-re-2022.jpg"},
+  {id:2, brand:"TVS", model:"Deluxe", area:"BAMBURI, MOMBASA", modelFull:"TVS KING DELUXE", year:2023, mileage:"9,200 KM", price:310000, code:"#MSA-0143", image:"/images/tvs-deluxe-2023.jpg"},
+  {id:3, brand:"Piaggio", model:"Petrol", area:"LIKONI, MOMBASA", modelFull:"PIAGGIO PETROL", year:2021, mileage:"22,000 KM", price:260000, code:"#MSA-0144", image:"/images/piaggio-petrol-2021.jpg"},
+  {id:4, brand:"TVS", model:"Duramax", area:"MOMBASA ISLAND", modelFull:"TVS DURAMAX", year:2024, mileage:"3,100 KM", price:345000, code:"#MSA-0145", image:"/images/tvs-duramax-2024.jpg"},
+  {id:5, brand:"Piaggio", model:"Diesel", area:"NYALI, MOMBASA", modelFull:"PIAGGIO DIESEL", year:2024, mileage:"1,500 KM", price:380000, code:"#MSA-0146", image:"/images/piaggio-diesel-2024.jpg"}
+];
+
+let filters = { brand: 'all', model: 'all', min: 0, max: 500000 };
+
+function renderTuktuks(){
+  const grid = document.getElementById('tuktukGrid');
+  const filtered = tuktuks.filter(t => 
+    (filters.brand === 'all' || t.brand === filters.brand) &&
+    (filters.model === 'all' || t.model === filters.model) &&
+    t.price >= filters.min && t.price <= filters.max
+  );
+  
+  grid.innerHTML = filtered.map(t => `
+    <div class="ticket-card">
+      <img src="${t.image}" alt="${t.modelFull}">
+      <div class="ticket-body">
+        <div class="ticket-row">
+          <div><div class="ticket-label">AREA</div><div class="ticket-value">${t.area}</div></div>
+          <div class="badge">Available</div>
+        </div>
+        <div class="ticket-row">
+          <div><div class="ticket-label">MODEL / YEAR</div><div class="ticket-value">${t.modelFull}, ${t.year}</div></div>
+          <div><div class="ticket-label">MILEAGE</div><div class="ticket-value">${t.mileage}</div></div>
+        </div>
+        <div class="ticket-row" style="border:none;margin:0;padding:0;">
+          <div><div class="ticket-label">ASKING PRICE</div><div class="price">KES ${t.price.toLocaleString()}</div></div>
+          <div style="text-align:right;"><div class="ticket-label">${t.code}</div></div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// BRAND FILTER
+document.querySelectorAll('#brandFilter .filter-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('#brandFilter .filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    filters.brand = btn.dataset.brand;
+    filters.model = 'all';
+    
+    const modelDiv = document.getElementById('modelFilter');
+    modelDiv.innerHTML = `<button class="filter-btn active" data-model="all">All Models</button>`;
+    
+    if(filters.brand === 'TVS'){
+      modelDiv.style.display = 'flex';
+      modelDiv.innerHTML += `<button class="filter-btn" data-model="Duramax">Duramax</button><button class="filter-btn" data-model="Deluxe">Deluxe</button>`;
+    } else if(filters.brand === 'Piaggio'){
+      modelDiv.style.display = 'flex';
+      modelDiv.innerHTML += `<button class="filter-btn" data-model="Petrol">Petrol</button><button class="filter-btn" data-model="Diesel">Diesel</button>`;
+    } else {
+      modelDiv.style.display = 'none';
+    }
+    addModelListeners();
+    renderTuktuks();
+  }
+});
+
+function addModelListeners(){
+  document.querySelectorAll('#modelFilter .filter-btn').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('#modelFilter .filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      filters.model = btn.dataset.model;
+      renderTuktuks();
+    }
+  });
+}
+
+// PRICE FILTER
+document.querySelectorAll('#priceFilter .filter-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('#priceFilter .filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    filters.min = parseInt(btn.dataset.min);
+    filters.max = parseInt(btn.dataset.max);
+    renderTuktuks();
+  }
+});
+
+renderTuktuks();
+</script>
+</body>
+</html>
