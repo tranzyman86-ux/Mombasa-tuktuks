@@ -13,11 +13,27 @@ collections:
     create: true
     slug: "{{fields.code}}"
     fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Brand", name: "brand", widget: "string"}
-            - {label: "Year", name: "year", widget: "number"}
-            - {label: "Price KES", name: "price", widget: "number"}
-            - {label: "Area", name: "area", widget: "string"}
-            - {label: "Code", name: "code", widget: "string"}
-            - {label: "Photo", name: "image", widget: "image"}
-            - {label: "Description", name: "body", widget: "markdown"}
+            - label: "Title"
+        name: "title"
+        widget: "string"
+            - label: "Brand"
+        name: "brand"
+        widget: "string"
+            - label: "Year"
+        name: "year"
+        widget: "number"
+            - label: "Price KES"
+        name: "price"
+        widget: "number"
+            - label: "Area"
+        name: "area"
+        widget: "string"
+            - label: "Code"
+        name: "code"
+        widget: "string"
+            - label: "Photo"
+        name: "image"
+        widget: "image"
+            - label: "Description"
+        name: "body"
+        widget: "markdown"
