@@ -1,25 +1,18 @@
 backend:
   name: github
-  repo: tranzyman86/mombasa-tuktuks
+  repo: tranzyman86/tuktuks  # change to your github repo name
   branch: main
-  base_url: https://tuktuks.tranzyman86.workers.dev
-  auth_scope: repo
+  base_url: https://api.netlify.com  # THIS IS THE KEY
+  auth_endpoint: /auth
 
 media_folder: "static/images"
 public_folder: "/images"
 
 collections:
-    - name: "tuktuks"
-    label: "Tuktuks"
-    folder: "content/tuktuks"
+    - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
-    slug: "{{fields.code}}"
     fields:
             - {label: "Title", name: "title", widget: "string"}
-            - {label: "Brand", name: "brand", widget: "string"}
-            - {label: "Year", name: "year", widget: "number"}
-            - {label: "Price KES", name: "price", widget: "number"}
-            - {label: "Area", name: "area", widget: "string"}
-            - {label: "Code", name: "code", widget: "string"}
-            - {label: "Photo", name: "image", widget: "image"}
-            - {label: "Description", name: "body", widget: "markdown"}
+            - {label: "Body", name: "body", widget: "markdown"}
