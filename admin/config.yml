@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: tranzyman86/tuktuks  # change to your github repo name
+  repo: tranzyman86-ux/Mombasa-tuktuks
   branch: main
-  base_url: https://api.netlify.com  # THIS IS THE KEY
+  base_url: https://api.netlify.com
   auth_endpoint: /auth
 
 media_folder: "static/images"
