@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: tranzyman86/mombasa-tuktuks
   branch: main
-  site_domain: https://tuktuks.tranzyman86.workers.dev
+  base_url: https://tuktuks.tranzyman86.workers.dev
+  auth_scope: repo
 
 media_folder: "static/images"
 public_folder: "/images"
@@ -13,27 +15,11 @@ collections:
     create: true
     slug: "{{fields.code}}"
     fields:
-            - label: "Title"
-        name: "title"
-        widget: "string"
-            - label: "Brand"
-        name: "brand"
-        widget: "string"
-            - label: "Year"
-        name: "year"
-        widget: "number"
-            - label: "Price KES"
-        name: "price"
-        widget: "number"
-            - label: "Area"
-        name: "area"
-        widget: "string"
-            - label: "Code"
-        name: "code"
-        widget: "string"
-            - label: "Photo"
-        name: "image"
-        widget: "image"
-            - label: "Description"
-        name: "body"
-        widget: "markdown"
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Brand", name: "brand", widget: "string"}
+            - {label: "Year", name: "year", widget: "number"}
+            - {label: "Price KES", name: "price", widget: "number"}
+            - {label: "Area", name: "area", widget: "string"}
+            - {label: "Code", name: "code", widget: "string"}
+            - {label: "Photo", name: "image", widget: "image"}
+            - {label: "Description", name: "body", widget: "markdown"}
